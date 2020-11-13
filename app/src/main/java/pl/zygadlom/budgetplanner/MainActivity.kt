@@ -1,22 +1,24 @@
 package pl.zygadlom.budgetplanner
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 
 
 class MainActivity : AppCompatActivity() {
 
-    fun checkIfSharedPreferencesExists(): Boolean {
+    private fun checkIfSharedPreferencesExists(): Boolean {
         val sharedPrefs = getSharedPreferences("sp_name", MODE_PRIVATE)
         return sharedPrefs.contains("initialized")
     }
 
-    fun replaceFragment(fragment: Fragment){
-        supportFragmentManager
-            .beginTransaction()
-            .replace(R.id.root_container, fragment)
-            .commit()
+    private fun replaceFragment(fragment: Fragment){
+        val manager = supportFragmentManager
+        val transaction = manager.beginTransaction()
+        transaction.replace(R.id.root_container, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,13 +28,17 @@ class MainActivity : AppCompatActivity() {
         if(savedInstanceState == null) {
             if (!checkIfSharedPreferencesExists()) {
                 val settingsFragment = SettingsFragment()
-                val manager = supportFragmentManager
-                val transaction = manager.beginTransaction()
-                transaction.replace(R.id.root_container, settingsFragment)
-                transaction.addToBackStack(null)
-                transaction.commit()
+                replaceFragment(settingsFragment)
+            } else {
+                val settingsFragment = SettingsFragment()
+                replaceFragment(settingsFragment)
             }
         }
 
+    }
+
+    fun onClickSettingsLoad(view: View) {
+        val settingsFragment = SettingsFragment()
+        replaceFragment(settingsFragment)
     }
 }

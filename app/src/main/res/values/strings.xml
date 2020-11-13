@@ -3,8 +3,9 @@
     <string name="set_your_monthly_budget">Set Your Monthly Budget :</string>
     <string name="select_your_currency">Select Your Currency :</string>
     <string name="save">SAVE</string>
-    <string name="your_budget">Your BUdget</string>
+    <string name="your_budget">Your Budget</string>
     <string name="eur">EUR</string>
     <string name="pln">PLN</string>
     <string name="usd">USD</string>
+    <string name="settings_iv">Settings_IV</string>
 </resources>

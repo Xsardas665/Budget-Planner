@@ -15,13 +15,12 @@
         android:id="@+id/root_container" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/settings_IV"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_alignParentEnd="true"
         android:layout_margin="10dp"
         android:contentDescription="@string/settings_iv"
-        app:srcCompat="@android:drawable/ic_menu_preferences"
-        android:onClick="onClickSettingsLoad"/>
+        app:srcCompat="@android:drawable/ic_menu_preferences" />
 
 </RelativeLayout>

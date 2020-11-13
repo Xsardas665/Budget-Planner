@@ -1,12 +1,15 @@
 package pl.zygadlom.budgetplanner
 
 import android.os.Bundle
-import android.view.View
+import android.util.Log
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 
 
 class MainActivity : AppCompatActivity() {
+
+    private val sTAG = "Main_Activity"
 
     private fun checkIfSharedPreferencesExists(): Boolean {
         val sharedPrefs = getSharedPreferences("sp_name", MODE_PRIVATE)
@@ -25,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
+        val button = findViewById<ImageView>(R.id.settings_IV)
+        button.setOnClickListener { onClickSettingsLoad() }
         if(savedInstanceState == null) {
             if (!checkIfSharedPreferencesExists()) {
                 val settingsFragment = SettingsFragment()
@@ -37,8 +42,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun onClickSettingsLoad(view: View) {
+    fun onClickSettingsLoad() {
         val settingsFragment = SettingsFragment()
+        Log.i(sTAG, "onClickSettingsLoad: settingsButtonPressed")
         replaceFragment(settingsFragment)
     }
 }

@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun onClickSettingsLoad() {
+    private fun onClickSettingsLoad() {
         val settingsFragment = SettingsFragment()
         Log.i(sTAG, "onClickSettingsLoad: settingsButtonPressed")
         replaceFragment(settingsFragment)

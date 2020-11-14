@@ -3,7 +3,7 @@
     <style name="Settings_text">
         <item name="android:textSize">27sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textColor">@color/my_text_color</item>
         <item name="android:padding">10dp</item>
         <item name="android:gravity">center</item>
     </style>

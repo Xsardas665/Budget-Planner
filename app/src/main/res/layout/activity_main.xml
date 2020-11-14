@@ -16,11 +16,11 @@
 
     <ImageView
         android:id="@+id/settings_IV"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_margin="10dp"
         android:contentDescription="@string/settings_iv"
-        app:srcCompat="@android:drawable/ic_menu_preferences" />
+        app:srcCompat="@drawable/settings_icon" />
 
 </RelativeLayout>

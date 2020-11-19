@@ -13,4 +13,16 @@
     <color name="my_clicked_color">#3C7D26</color>
     <color name="my_unclicked_color">#80B569</color>
     <color name="settings_button_color">#3C7D26</color>
+
+    <color name="piechart_background">#3100ff</color>
+    <color name="piechart_full">#6D5A6D</color>
+    <color name="piechart_1">#C700C7</color>
+    <color name="piechart_2">#8ce309</color>
+    <color name="piechart_3">#EB0C00</color>
+    <color name="piechart_4">#00B7E0</color>
+    <color name="piechart_5">#33ffb4</color>
+    <color name="piechart_6">#FBFF7A</color>
+    <color name="piechart_7">#d7b6e3</color>
+    <color name="piechart_8">#99D8FF</color>
+
 </resources>

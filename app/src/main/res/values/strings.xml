@@ -8,4 +8,5 @@
     <string name="pln">PLN</string>
     <string name="usd">USD</string>
     <string name="settings_iv">Settings_IV</string>
+    <string name="category_details_fragment">Category Details Fragment</string>
 </resources>

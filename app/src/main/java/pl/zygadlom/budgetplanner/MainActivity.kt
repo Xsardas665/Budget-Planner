@@ -1,5 +1,6 @@
 package pl.zygadlom.budgetplanner
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
@@ -12,8 +13,8 @@ class MainActivity : AppCompatActivity() {
     private val sTAG = "Main_Activity"
 
     private fun checkIfSharedPreferencesExists(): Boolean {
-        val sharedPrefs = getSharedPreferences("sp_name", MODE_PRIVATE)
-        return sharedPrefs.contains("initialized")
+        val sharedPrefs = getPreferences(Context.MODE_PRIVATE)
+        return sharedPrefs.contains("currency")
     }
 
     private fun replaceFragment(fragment: Fragment){
